@@ -84,6 +84,18 @@ BODY
 }
 ```
 
+## 执行Workflow
+URL POST
+```
+ http://localhost:8080/api/workflow/my_decision_task
+```
+BODY
+```
+{
+	"decision":"SystemTask"
+}
+```
+
 ## 执行流程
 Lambada Decision
 ![lambada](./images/lambadaDecision.png)
