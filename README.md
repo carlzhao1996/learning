@@ -1,1 +1,1 @@
-# Programming study note
+# CS study note
