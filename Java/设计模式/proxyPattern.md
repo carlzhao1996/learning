@@ -6,7 +6,7 @@
 因为代理对象需要与目标对象实现一样的接口,所以会有很多代理类,类太多.同时,一旦接口增加方法,目标对象与代理对象都要维护.
 
 e.g.
-```
+```java
 public interface IuserDao {
 	
 	void save();
@@ -34,7 +34,7 @@ class UserDaoProxy implements IuserDao{
 }
 ```
 
-```
+```java
 public class Test {
     public static void main(String[] args) {
         //目标对象
@@ -56,7 +56,7 @@ public class Test {
 * 动态代理也叫做:JDK代理,接口代理,JDK中生成代理对象的API
 * 代理类所在包:java.lang.reflect.Proxy
 * JDK实现代理只需要使用newProxyInstance方法,但是该方法需要接收三个参数,完整的写法是:
-```
+```java
 static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces,InvocationHandler h )
 ```
 
@@ -65,7 +65,7 @@ static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces,Invocat
  *	Class<?>[] interfaces:目标对象实现的接口的类型,使用泛型方式确认类型
  *	InvocationHandler h:事件处理,执行目标对象的方法时,会触发事件处理器的方法,会把当前执行目标对象的方法作为参数传入
 
-```
+```java
 /**
  * 创建动态代理对象
  * 动态代理不需要实现接口,但是需要指定接口类型
@@ -98,7 +98,7 @@ public Object getProxyInstance(){
 }
 ```
 
-```
+```java
 /**
  * 测试类
  * 总结：

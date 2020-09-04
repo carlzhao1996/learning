@@ -5,7 +5,7 @@
 ### Request
 接受http协议传送到服务器的数据
 e.g.
-```
+```java
 HttpServletRequest request;
 request.setCharacterEncoding("utf-8");
 String cu_name = request.getParameter("cu_name");
@@ -15,7 +15,7 @@ String cu_password = request.getParameter("cu_password");s
 ### Response
 对客户端的响应
 e.g.
-```
+```java
 response.setCharacterEncoding("utf-8");
 response.sendRedirect("/Webapp");
 ```
@@ -30,7 +30,7 @@ application对象的基类是：javax.servlet.ServletContext
 ### Out
 out 对象用于在Web浏览器内输出信息，并且管理应用服务器上的输出缓冲区。在使用 out 对象输出数据时，可以对数据缓冲区进行操作，及时清除缓冲区中的残余数据，为其他的输出让出缓冲空间。待数据输出完毕后，要及时关闭输出流。
 e.g.
-```
+```java
 out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
@@ -44,7 +44,7 @@ pageContext 对象的作用是取得任何范围的参数，通过它可以获�
 （javax.servlet.jsp.PageContext的实例，对象直译时可以称作“页面上下文”对象，代表的是当前页面运行的一些属性，通过此对象可以拿到其他8大对象，使用该对象可以访问页面中的共享数据，常用的方法：getServletContext()和getServletConfigO.）
 
 ### Config
-```
+```java
 ServletConfig config = this.getServletConfig();
 String name = config.getInitParameter("example");
 ```
@@ -56,7 +56,7 @@ page 对象代表JSP本身，只有在JSP页面内才是合法的。 page隐含�
 
 ### Cookie
 e.g.
-```
+```java
 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     //创建Cookie
     Cookie cookie1 = new Cookie("test","haha");

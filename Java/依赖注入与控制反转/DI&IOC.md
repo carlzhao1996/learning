@@ -4,7 +4,7 @@ IOC是为了减少代码的耦合度。
 ### 简单IOC实现
 e.g.
 UserService Interface
-```
+```java
 public interface UserService {
 	/**
 	 * 保存用户信息
@@ -14,7 +14,7 @@ public interface UserService {
 ```
 
 UserDao
-```
+```java
 public interface UserDao {
 	/**
 	 * 保存用户的方法
@@ -24,7 +24,7 @@ public interface UserDao {
 ```
 
 保存User接口实现类
-```
+```java
 public class UserDaoImpl implements UserDao{
 
 	@Override
@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao{
 
 }
 ```
-```
+```java
 public class UserDaoOracleImpl implements UserDao{
 
 	@Override
@@ -48,7 +48,7 @@ public class UserDaoOracleImpl implements UserDao{
 ```
 
 服务接口实现类
-```
+```java
 public class UserServiceImpl implements UserService{
 	//原来的形式
 	/*private UserDao userDao=new UserDaoImpl();*/
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
 ```
 
 工厂类：工厂类负责管理dao实例
-```
+```java
 public class UserDaoFactory {
 	//负责创建用户Dao实例的方法
 	public static UserDao getInstance(){
@@ -72,7 +72,7 @@ public class UserDaoFactory {
 ```
 
 Main
-```
+```java
 public class UserServiceImplTest {
 
 	@Test

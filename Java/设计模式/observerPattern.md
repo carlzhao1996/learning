@@ -1,5 +1,5 @@
 # 观察者模式
-```
+```java
 /***
  * 抽象被观察者接口
  * 声明了添加、删除、通知观察者方法
@@ -14,7 +14,7 @@ public interface Serverable {
     
 }
 ```
-```
+```java
 /**
  * 抽象观察者
  * 定义了一个update()方法，当被观察者调用notifyObservers()方法时，观察者的update()方法会被回调。
@@ -26,7 +26,7 @@ interface Observer {
 }
 ```
 
-```
+```java
 /**
  * 被观察者，也就是微信公众号服务
  * 实现了Observerable接口，对Observerable接口的三个方法进行了具体实现
@@ -74,7 +74,7 @@ class WechatServer implements Serverable {
 }
 ```
 
-```
+```java
 /**
  * 观察者
  * 实现了update方法
@@ -103,7 +103,7 @@ class User implements Observer {
 }
 ```
 
-```
+```java
 /**
  * 测试
  * @author Carl

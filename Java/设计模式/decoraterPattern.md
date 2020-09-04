@@ -1,5 +1,5 @@
 # 装饰者模式
-```
+```java
 /**
 * 抽象构件角色
 */
@@ -135,7 +135,7 @@ class BigTrouser extends Finery {
 }
 ```
 
-```
+```java
 public static void main(String[] args) {
     ConcreteComponent c = new ConcreteComponent();
     ConcreteDecoratorA d1 = new ConcreteDecoratorA();
